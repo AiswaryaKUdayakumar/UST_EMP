@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { EmployeeRegService } from '../employee-reg.service';
 import { User } from '../User';
 
@@ -7,15 +7,17 @@ import { User } from '../User';
   templateUrl: './employee-reg.component.html',
   styleUrls: ['./employee-reg.component.css']
 })
-export class EmployeeRegComponent implements OnInit {
+export class EmployeeRegComponent implements OnChanges{
   user:User= new User("","",0,"");
   message: any;
   constructor(private service:EmployeeRegService){
 
 
   }
+  
 
-  ngOnInit() {
+
+  ngOnChanges() {
 
   }
   public registerNow(){
